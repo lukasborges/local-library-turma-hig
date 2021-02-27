@@ -17,13 +17,11 @@ jobs:
   job2:
     runs-on: windows-latest
     name: second job
-    needs: [job1]
     steps:
     - run: date
   job3:
     runs-on: macos-latest
     name: third job
-    needs: [job1, job2]
     steps:
     - run: date
   job4:
