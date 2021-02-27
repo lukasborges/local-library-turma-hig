@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: first job
+    steps:
+    - name: step one
+    - run: date
+  job2:
+    runs-on: windows-latest
+    name: second job
+    steps:
+    - name: step one
+    - run: date
+  job3:
+    runs-on: macos-latest
+    name: third job
+    steps:
+    - name: step one
+    - run: date
+  job4:
+    runs-on: ubuntu-latest
+    name: last job
+    steps:
+    - name: step one
+    - run: date
