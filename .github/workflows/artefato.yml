@@ -13,8 +13,8 @@ jobs:
       ARTIFACT-NAME: meu-artefato
     steps:
       - uses: actions/checkout@v2
-			- name: Upload artifact
-				uses: actions/upload-artifact@v2
-      	with:
-        	name: ${{env.ARTIFACT-NAME}}
-        	path: .
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+            name: ${{env.ARTIFACT-NAME}}
+            path: .
