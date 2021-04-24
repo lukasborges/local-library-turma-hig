@@ -16,6 +16,7 @@
     "async": "^3.2.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "eslint": "^7.25.0",
     "express": "~4.16.1",
     "express-validator": "^6.9.2",
     "http-errors": "~1.6.3",
@@ -23,6 +24,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.11.13",
     "morgan": "~1.9.1",
+    "prettier": "^2.2.1",
     "pug": "^3.0.0"
   },
   "devDependencies": {
