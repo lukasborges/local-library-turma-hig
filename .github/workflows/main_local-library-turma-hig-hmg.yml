@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - local-library-turma-hig-hmg
+name: Build local-library-turma-hig
 
 on:
   push:
@@ -47,7 +47,8 @@ jobs:
         name: node-app
     
     - name: Set env variables
-      run: set MONGODB_URI=${{ env.MONGODB_URI_HMG }}
+      run: |
+          set MONGODB_URI=${{ secrets.MONGODB_URI_HMG }}
       
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
