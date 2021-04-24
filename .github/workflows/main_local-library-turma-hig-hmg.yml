@@ -48,7 +48,7 @@ jobs:
     
     - name: Set env variables
       run: |
-          set MONGODB_URI=${{ secrets.MONGODB_URI }}
+          set MONGODB_URI=${{ env.MONGODB_URI }}
       
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
@@ -74,7 +74,7 @@ jobs:
     
     - name: Set env variables
       run: |
-          set MONGODB_URI=${{ secrets.MONGODB_URI }} 
+          set MONGODB_URI=${{ env.MONGODB_URI }} 
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
