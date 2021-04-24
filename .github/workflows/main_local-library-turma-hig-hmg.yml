@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'HMG'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -48,7 +48,7 @@ jobs:
     
     - name: Set env variables
       run: |
-          set MONGODB_URI=${{ secrets.MONGODB_URI_HMG }}
+          set MONGODB_URI=${{ secrets.MONGODB_URI }}
       
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'PRD'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -74,7 +74,7 @@ jobs:
     
     - name: Set env variables
       run: |
-          set MONGODB_URI=${{ secrets.MONGODB_URI_PRD }}
+          set MONGODB_URI=${{ secrets.MONGODB_URI }} 
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
